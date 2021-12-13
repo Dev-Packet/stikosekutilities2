@@ -1,17 +1,17 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using stikosekutilities2;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // Obecné informace o sestavení se řídí přes následující 
 // sadu atributů. Změnou hodnot těchto atributů se upraví informace
 // přidružené k sestavení.
 [assembly: AssemblyTitle("stikosekutilities2")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("The continuation of stikosektilities a muck utility mod.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("DevPacket")]
 [assembly: AssemblyProduct("stikosekutilities2")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright DevPacket ©  2021")]
+[assembly: AssemblyTrademark("DevPacket")]
 [assembly: AssemblyCulture("")]
 
 // Nastavení ComVisible na false způsobí neviditelnost typů v tomto sestavení
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Můžete zadat všechny hodnoty nebo nastavit výchozí číslo buildu a revize
 // pomocí zástupného znaku * takto:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion(PluginConstants.Version)]
+[assembly: AssemblyFileVersion(PluginConstants.Version)]

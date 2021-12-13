@@ -8,11 +8,15 @@ using UnityEngine;
 
 namespace stikosekutilities2
 {
-    [BepInPlugin("devpacket.stikosekutilities2", "stikosekutilities2", "0.0.0.1")]
+    [BepInPlugin(PluginConstants.GUID, PluginConstants.Name, PluginConstants.Version)]
     public class Plugin : BaseUnityPlugin
     {
+
+        public static Plugin Instance { get; private set; }
+
         private void Awake()
         {
+            Instance = this;
             // Plugin startup logic
             Logger.LogInfo($"Plugin stikosekutilities2 is loaded!");
         }
