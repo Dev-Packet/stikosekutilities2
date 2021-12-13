@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stikosekutilities2", "stikosekutilities2\stikosekutilities2.csproj", "{F2483597-C002-46D0-9C85-759BAF82E663}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2483597-C002-46D0-9C85-759BAF82E663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2483597-C002-46D0-9C85-759BAF82E663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2483597-C002-46D0-9C85-759BAF82E663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2483597-C002-46D0-9C85-759BAF82E663}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E350AC00-D897-45EE-8D7D-F939B9D597AF}
+	EndGlobalSection
+EndGlobal
