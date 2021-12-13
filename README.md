@@ -6,7 +6,7 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Dev-Packet/stikosekutilities2?style=flat-square)
 
 The continuation of stikosekutilities, a [Muck](https://store.steampowered.com/app/1625450/Muck/) utility mod.
-Developed by [stikosek](https://www.github.com/stikosek) and [JNNJ](https://www.github.com/CodeName-Anti)
+Now developed by [stikosek](https://www.github.com/stikosek) and [JNNJ](https://www.github.com/CodeName-Anti)
 
 
 
