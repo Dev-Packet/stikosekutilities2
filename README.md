@@ -37,5 +37,10 @@ If you dont want to use our installer you can install the mod mannualy
 ## Support
 If you need help with the instalation or any bugs please make a github issue or join the [stikosek discord server](https://discord.gg/dzXxU7jwGt) or the [devpacket discord server](https://discord.gg/dzXxU7jwGt) for better support 
 
+## License
+[MIT](https://opensource.org/licenses/MIT)
+
 ## DISCLAIMER
 This software is for testing/educational purposes only. We do not encourage using it when you're not allowed, and will not bear liability for your actions.
+
+
