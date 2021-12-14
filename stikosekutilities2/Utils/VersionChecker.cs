@@ -1,22 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-using BepInEx; 
+using System.Net;
+using Newtonsoft.Json.Linq;
+using System.Reflection;
 
 namespace stikosekutilities2.ClientUtilities
 {
     internal class VersionChecker
     {
-        public static string GetLatestVersion()
-        {
 
-            try
+        private static readonly bool init;
+        public static bool UpdateAvailable;
+
+        static VersionChecker()
+        {
+            if (!init)
             {
-                using (var client = new WebClient())
+                try
                 {
+                    using var client = new WebClient();
                     // Some random user agent because with others it responds with 403
                     client.Headers.Add("User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0");
                     string json = client.DownloadString(PluginConstants.ReleasesAPI);
@@ -38,12 +39,11 @@ namespace stikosekutilities2.ClientUtilities
 
                     init = true;
                 }
+                catch (Exception)
+                {
+                    Plugin.Log.LogWarning("Couldn't fetch updates from GitHub!");
+                }
             }
-            catch (Exception)
-            {
-                CheatLog.Warning("Couldn't fetch Updates from GitHub!");
-            }
-            return "lol";
         }
 
     }
