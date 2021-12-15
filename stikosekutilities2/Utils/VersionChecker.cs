@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Net;
-using Newtonsoft.Json.Linq;
 using System.Reflection;
 
-namespace stikosekutilities2.ClientUtilities
+namespace stikosekutilities2.Utils
 {
     internal class VersionChecker
     {

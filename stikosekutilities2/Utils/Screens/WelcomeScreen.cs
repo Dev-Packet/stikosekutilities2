@@ -1,5 +1,4 @@
-﻿using stikosekutilities2.ClientUtilities;
-using UnityEngine;
+﻿using UnityEngine;
 using static stikosekutilities2.Utils.DrawingUtil;
 
 namespace stikosekutilities2.Utils.Screens
@@ -54,7 +53,7 @@ namespace stikosekutilities2.Utils.Screens
             Rect rect = new(x, y, res.width / divider, res.height / divider);
 
             //Draw middle rect
-            DrawColor(updateAvailable ? new Color(0, 1, 0, 0.6f) : new Color(0, 1, 0, 0.6f) , rect);
+            DrawColor(updateAvailable ? new Color(0, 1, 0, 0.6f) : new Color(0, 1, 0, 0.6f), rect);
 
             #region WaterMark
 
@@ -78,19 +77,20 @@ namespace stikosekutilities2.Utils.Screens
 
             #endregion
 
-            if(updateAvailable)
+            if (updateAvailable)
             {
                 DrawCenteredText(
                 "Welcome to DevPacket's stikosekutilities2, the advanced muck utility mod!" + "\n" +
                 "<b>There's an update available!</b>" + "\n" +
                 "In order to use this mod, update to the newest version!", 40, Color.white);
-            } else
+            }
+            else
             {
                 DrawCenteredText(
                 "Welcome to DevPacket's Muck utility mod!" + "\n" +
                 "To open the ClickGUI press \"" + KeyCodeFormatter.KeyNames[KeyCode.RightShift] + "\"!", 40, Color.white);
             }
-            
+
         }
 
     }

@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
-using stikosekutilities2.ClientUtilities;
+using stikosekutilities2.Cheats;
+using stikosekutilities2.Utils;
 using stikosekutilities2.Utils.Screens;
 using System.Diagnostics;
 
@@ -17,7 +18,9 @@ namespace stikosekutilities2
             Instance = this;
             WelcomeScreen.draw = true;
 
-            if(VersionChecker.UpdateAvailable)
+            Utilities.DownloadJsonLibrary();
+
+            if (VersionChecker.UpdateAvailable)
             {
                 // Cancel loading
                 Logger.LogWarning($"Outdated version of {PluginConstants.Name}! Canceling loading!");
@@ -31,6 +34,11 @@ namespace stikosekutilities2
         private void OnGUI()
         {
             WelcomeScreen.OnGUI(gameObject);
+        }
+
+        private void OnUpdate()
+        {
+            Update.ActualUpdate();
         }
 
     }
