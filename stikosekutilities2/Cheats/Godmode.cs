@@ -1,13 +1,11 @@
 ﻿namespace stikosekutilities2.Cheats
 {
 
-    internal class Godmode
+    public class GodMode : BaseCheat
     {
-        public static bool activated = true;
-
-        public static void Update()
+        public override void Update()
         {
-            if (activated)
+            if (Activated)
             {
                 PlayerStatus.Instance.hp = PlayerStatus.Instance.maxHp;
                 PlayerStatus.Instance.shield = PlayerStatus.Instance.maxShield;

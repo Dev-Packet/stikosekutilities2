@@ -34,11 +34,12 @@ namespace stikosekutilities2
         private void OnGUI()
         {
             WelcomeScreen.OnGUI(gameObject);
+            BaseCheat.ExecuteForAllModules(cheat => cheat.OnGUI());
         }
 
-        private void OnUpdate()
+        private void Update()
         {
-            Update.ActualUpdate();
+            BaseCheat.ExecuteForAllModules(cheat => cheat.Update());
         }
 
     }

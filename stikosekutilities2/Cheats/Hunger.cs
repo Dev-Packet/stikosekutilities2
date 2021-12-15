@@ -1,13 +1,12 @@
 ﻿namespace stikosekutilities2.Cheats
 {
 
-    internal class Hunger
+    public class Hunger : BaseCheat
     {
-        public static bool activated = true;
 
-        public static void Update()
+        public override void Update()
         {
-            if (activated)
+            if (Activated)
             {
                 PlayerStatus.Instance.hunger = PlayerStatus.Instance.maxHunger;
             }

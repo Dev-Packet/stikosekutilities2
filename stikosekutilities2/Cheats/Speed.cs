@@ -1,14 +1,12 @@
 ﻿namespace stikosekutilities2.Cheats
 {
-    internal class Speed
+    public class Speed : BaseCheat
     {
-        public static bool activated = true;
-
         private static float originalMultiplier = -999;
 
-        public static void Update()
+        public override void Update()
         {
-            if (activated)
+            if (Activated)
             {
                 if (-originalMultiplier == -999)
                     originalMultiplier = PlayerStatus.Instance.currentSpeedArmorMultiplier;

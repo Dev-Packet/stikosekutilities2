@@ -3,25 +3,23 @@
 namespace stikosekutilities2.Cheats
 {
 
-    internal class Clicktp
+    public class ClickTP : BaseCheat
     {
-        public static bool activated = true;
         public static KeyCode key = KeyCode.Mouse1;
 
-        public static void Update()
+        public override void Update()
         {
-            if (activated && Input.GetKeyDown(key))
+            if (Activated && Input.GetKeyDown(key))
             {
-                PlayerMovement.Instance.GetRb().position = Clicktp.FindTpPos(); ;
+                PlayerMovement.Instance.GetRb().position = FindTpPos();
             }
 
         }
 
-        public static Vector3 FindTpPos()
+        private static Vector3 FindTpPos()
         {
             Transform playerCam = PlayerMovement.Instance.playerCam;
-            RaycastHit raycastHit;
-            if (Physics.Raycast(playerCam.position, playerCam.forward, out raycastHit, 1500f))
+            if (Physics.Raycast(playerCam.position, playerCam.forward, out RaycastHit raycastHit, 1500f))
             {
                 Vector3 b = Vector3.zero;
                 if (raycastHit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))

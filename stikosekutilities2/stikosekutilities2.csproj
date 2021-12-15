@@ -96,12 +96,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cheats\Clicktp.cs" />
-    <Compile Include="Cheats\Godmode.cs" />
+    <Compile Include="Cheats\BaseCheat.cs" />
+    <Compile Include="Cheats\CheatAttribute.cs" />
+    <Compile Include="Cheats\ClickTP.cs" />
+    <Compile Include="Cheats\GodMode.cs" />
     <Compile Include="Cheats\Hunger.cs" />
     <Compile Include="Cheats\Speed.cs" />
     <Compile Include="Cheats\Stamina.cs" />
-    <Compile Include="Cheats\Update.cs" />
     <Compile Include="Utils\DrawingUtil.cs" />
     <Compile Include="Utils\KeyCodeFormatter.cs" />
     <Compile Include="Utils\Screens\WelcomeScreen.cs" />

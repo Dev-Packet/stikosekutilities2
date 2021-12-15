@@ -1,4 +1,5 @@
-﻿using System;
+﻿using stikosekutilities2.Cheats;
+using System;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
@@ -8,6 +9,15 @@ namespace stikosekutilities2.Utils
 {
     public static class Utilities
     {
+
+        public static bool IsCheat(this Type type)
+        {
+            return
+                // Has CheatAttribute
+                type.GetCustomAttributes(typeof(CheatAttribute), false).Length != 0 &&
+                // Is inherited from BaseCheat
+                typeof(BaseCheat).IsAssignableFrom(type);
+        }
 
         /// <summary>
         /// Downloads a File from an URL
