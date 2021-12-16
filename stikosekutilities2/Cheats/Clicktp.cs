@@ -14,6 +14,9 @@ namespace stikosekutilities2.Cheats
 
         public override void Update()
         {
+            if (!InGame)
+                return;
+
             if (Activated && Input.GetKeyDown(key))
             {
                 PlayerMovement.Instance.GetRb().position = FindTpPos();

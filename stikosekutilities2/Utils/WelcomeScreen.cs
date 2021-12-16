@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using static stikosekutilities2.Utils.DrawingUtil;
 
-namespace stikosekutilities2.Utils.Screens
+namespace stikosekutilities2.Utils
 {
     public static class WelcomeScreen
     {
@@ -11,7 +11,7 @@ namespace stikosekutilities2.Utils.Screens
 
         public static bool draw;
 
-        public static void OnGUI(GameObject gameObj)
+        public static void OnGUI(GameObject gameObject)
         {
             if (!init)
             {
@@ -29,7 +29,7 @@ namespace stikosekutilities2.Utils.Screens
                     draw = false;
 
                     if (updateAvailable)
-                        Object.Destroy(gameObj);
+                        Object.Destroy(gameObject);
 
                     return;
                 }
@@ -57,7 +57,7 @@ namespace stikosekutilities2.Utils.Screens
 
             #region WaterMark
 
-            string waterMark = "<b>JNNJ's CrabGame Cheat</b>";
+            string waterMark = "<b>DevPacket's stikosekutilities2</b>";
 
             Rect waterMarkRect = CenteredTextRect(waterMark, 40);
             waterMarkRect.y -= (rect.y / 1.6f);

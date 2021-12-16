@@ -11,6 +11,9 @@ namespace stikosekutilities2.Cheats
 
         public override void Update()
         {
+            if (!InGame)
+                return;
+
             if (Activated)
             {
                 PlayerStatus.Instance.hp = PlayerStatus.Instance.maxHp;

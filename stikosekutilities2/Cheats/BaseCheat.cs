@@ -8,6 +8,8 @@ namespace stikosekutilities2.Cheats
 {
     public class BaseCheat : LayoutHelpers
     {
+        protected bool InGame => PlayerMovement.Instance != null;
+
         public BaseCheat(string name, WindowID windowID) : this(false, name, windowID)
         {
         }
@@ -28,15 +30,10 @@ namespace stikosekutilities2.Cheats
 
         public virtual void Update() { }
         public virtual void OnGUI() { }
-        protected virtual void RenderElements()
-        {
-            Plugin.Log.LogError("Hello");
-        }
+        protected virtual void RenderElements() { }
 
         public void InitRender()
         {
-            Plugin.Log.LogError("========================================");
-            Plugin.Log.LogError(GetType().FullName);
             var window = GUIRenderer.GetWindow(WindowID);
 
             window.DrawWindowEvent += RenderElements;
@@ -46,11 +43,7 @@ namespace stikosekutilities2.Cheats
         {
             if(Cheats == null)
             {
-                Plugin.Log.LogError("INIT");
                 Cheats = CheatAttribute.GetAllCheats().ToList();
-
-                Cheats.ForEach(c => Plugin.Log.LogError(c.GetType().FullName));
-
             }
 
             Cheats.ForEach(cheat =>

@@ -14,7 +14,7 @@ namespace stikosekutilities2.Cheats
 
         public override void Update()
         {
-            if (PlayerStatus.Instance == null)
+            if (!InGame)
                 return;
 
             if (originalMultiplier == -999)

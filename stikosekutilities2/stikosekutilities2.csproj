@@ -36,10 +36,6 @@
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\BepInEx\core\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="0Harmony20">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\BepInEx\core\0Harmony20.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\Muck_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -122,14 +118,16 @@
     <Compile Include="Cheats\ClickTP.cs" />
     <Compile Include="Cheats\GodMode.cs" />
     <Compile Include="Cheats\Hunger.cs" />
+    <Compile Include="Cheats\NoCoins.cs" />
     <Compile Include="Cheats\Speed.cs" />
     <Compile Include="Cheats\Stamina.cs" />
+    <Compile Include="Patches\LootContainerInteractPatch.cs" />
     <Compile Include="UI\GUIRenderer.cs" />
     <Compile Include="UI\LayoutHelpers.cs" />
     <Compile Include="UI\WindowManager.cs" />
     <Compile Include="Utils\DrawingUtil.cs" />
     <Compile Include="Utils\KeyCodeFormatter.cs" />
-    <Compile Include="Utils\Screens\WelcomeScreen.cs" />
+    <Compile Include="Utils\WelcomeScreen.cs" />
     <Compile Include="Utils\Utilities.cs" />
     <Compile Include="Utils\VersionChecker.cs" />
     <Compile Include="PluginConstants.cs" />
@@ -140,8 +138,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Patches\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
