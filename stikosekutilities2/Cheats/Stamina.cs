@@ -2,7 +2,7 @@
 
 namespace stikosekutilities2.Cheats
 {
-
+    [Cheat]
     public class Stamina : BaseCheat
     {
         public Stamina() : base("Stamina", WindowID.Player)

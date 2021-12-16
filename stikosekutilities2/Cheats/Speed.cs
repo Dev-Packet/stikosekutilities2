@@ -2,10 +2,11 @@
 
 namespace stikosekutilities2.Cheats
 {
+    [Cheat]
     public class Speed : BaseCheat
     {
         private static float originalMultiplier = -999;
-        private float multiplier;
+        private float multiplier = 1;
 
         public Speed() : base("Speed", WindowID.Player)
         {
@@ -13,10 +14,14 @@ namespace stikosekutilities2.Cheats
 
         public override void Update()
         {
+            if (PlayerStatus.Instance == null)
+                return;
+
+            if (originalMultiplier == -999)
+                originalMultiplier = PlayerStatus.Instance.currentSpeedArmorMultiplier;
+
             if (Activated)
             {
-                if (-originalMultiplier == -999)
-                    originalMultiplier = PlayerStatus.Instance.currentSpeedArmorMultiplier;
                 PlayerStatus.Instance.currentSpeedArmorMultiplier = multiplier;
             }
             else

@@ -2,7 +2,7 @@
 
 namespace stikosekutilities2.Cheats
 {
-
+    [Cheat]
     public class Hunger : BaseCheat
     {
         public Hunger() : base("Hunger", WindowID.Player)

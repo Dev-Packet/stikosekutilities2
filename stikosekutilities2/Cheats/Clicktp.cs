@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace stikosekutilities2.Cheats
 {
-
+    [Cheat]
     public class ClickTP : BaseCheat
     {
         public static KeyCode key = KeyCode.Mouse1;

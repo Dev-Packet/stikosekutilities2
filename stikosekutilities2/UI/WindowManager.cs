@@ -58,6 +58,8 @@ namespace stikosekutilities2.UI
         /// <param name="id"></param>
         void DrawWindow(int id)
         {
+            DrawWindowEvent();
+
             if (Draggable)
             {
                 GUI.DragWindow(new Rect(0, 0, 10000, 20));

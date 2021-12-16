@@ -2,7 +2,7 @@
 
 namespace stikosekutilities2.Cheats
 {
-
+    [Cheat]
     public class GodMode : BaseCheat
     {
         public GodMode() : base("GodMode", WindowID.Player)
