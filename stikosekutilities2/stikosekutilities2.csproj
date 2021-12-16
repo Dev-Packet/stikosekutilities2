@@ -103,6 +103,9 @@
     <Compile Include="Cheats\Hunger.cs" />
     <Compile Include="Cheats\Speed.cs" />
     <Compile Include="Cheats\Stamina.cs" />
+    <Compile Include="UI\GUIRenderer.cs" />
+    <Compile Include="UI\LayoutHelpers.cs" />
+    <Compile Include="UI\WindowManager.cs" />
     <Compile Include="Utils\DrawingUtil.cs" />
     <Compile Include="Utils\KeyCodeFormatter.cs" />
     <Compile Include="Utils\Screens\WelcomeScreen.cs" />
@@ -111,6 +114,7 @@
     <Compile Include="PluginConstants.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\WindowID.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

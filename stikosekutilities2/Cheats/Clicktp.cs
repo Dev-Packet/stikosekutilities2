@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using stikosekutilities2.UI;
+using UnityEngine;
 
 namespace stikosekutilities2.Cheats
 {
@@ -7,13 +8,21 @@ namespace stikosekutilities2.Cheats
     {
         public static KeyCode key = KeyCode.Mouse1;
 
+        public ClickTP() : base("ClickTP", WindowID.Movement)
+        {
+        }
+
         public override void Update()
         {
             if (Activated && Input.GetKeyDown(key))
             {
                 PlayerMovement.Instance.GetRb().position = FindTpPos();
             }
+        }
 
+        protected override void RenderElements()
+        {
+            Activated = Toggle(Name, Activated);
         }
 
         private static Vector3 FindTpPos()
