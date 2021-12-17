@@ -4,6 +4,7 @@ using HarmonyLib;
 using stikosekutilities2.Cheats;
 using stikosekutilities2.UI;
 using stikosekutilities2.Utils;
+using System;
 using System.Diagnostics;
 using UnityEngine;
 
@@ -33,10 +34,24 @@ namespace stikosekutilities2
             }
 
             // Init Harmony
-            HarmonyInstance = new Harmony(PluginConstants.GUID);
-            HarmonyInstance.PatchAll();
+            try
+            {
+                HarmonyInstance = new Harmony(PluginConstants.GUID);
+                HarmonyInstance.PatchAll();
 
-            GUIRenderer.AddWindow(WindowID.Player, "Sugma", new(70, 90, 320, 400));
+                foreach (var method in HarmonyInstance.GetPatchedMethods())
+                {
+                    Logger.LogInfo($"Patched: {method.DeclaringType.FullName}.{method.Name}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError($"Error initializing Harmony: {ex}");
+            }
+
+            // Add Windows
+            GUIRenderer.AddWindow(WindowID.Player, "Player", new(70, 90, 320, 400));
+            GUIRenderer.AddWindow(WindowID.Movement, "Movement", new(400, 90, 320, 400));
 
             // Init rendering
             BaseCheat.ExecuteForAllModules(c => c.InitRender());
@@ -59,7 +74,7 @@ namespace stikosekutilities2
         private void Update()
         {
             // Hide & Show ClickGUI
-            if(Input.GetKeyDown(KeyCode.RightShift))
+            if (Input.GetKeyDown(KeyCode.RightShift))
             {
                 GUIRenderer.Shown = !GUIRenderer.Shown;
             }

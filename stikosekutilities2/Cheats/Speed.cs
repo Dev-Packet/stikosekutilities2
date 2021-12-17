@@ -8,7 +8,7 @@ namespace stikosekutilities2.Cheats
         private static float originalMultiplier = -999;
         private float multiplier = 1;
 
-        public Speed() : base("Speed", WindowID.Player)
+        public Speed() : base("Speed", WindowID.Movement)
         {
         }
 

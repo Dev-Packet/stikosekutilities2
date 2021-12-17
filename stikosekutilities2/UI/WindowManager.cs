@@ -49,7 +49,7 @@ namespace stikosekutilities2.UI
                 WindowRect.x = Mathf.Clamp(WindowRect.x, 0, Screen.currentResolution.width - WindowRect.width);
                 WindowRect.y = Mathf.Clamp(WindowRect.y, 0, Screen.currentResolution.height - WindowRect.height);
             }
-            
+
         }
 
         /// <summary>

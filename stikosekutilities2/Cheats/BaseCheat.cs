@@ -41,7 +41,7 @@ namespace stikosekutilities2.Cheats
 
         public static void ExecuteForAllModules(Action<BaseCheat> action)
         {
-            if(Cheats == null)
+            if (Cheats == null)
             {
                 Cheats = CheatAttribute.GetAllCheats().ToList();
             }
@@ -51,7 +51,8 @@ namespace stikosekutilities2.Cheats
                 try
                 {
                     action(cheat);
-                } catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     Plugin.Log.LogError($"Error while executing Cheat \"{cheat.Name}\": {ex}");
                 }

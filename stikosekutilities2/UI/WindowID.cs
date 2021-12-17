@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace stikosekutilities2.UI
+﻿namespace stikosekutilities2.UI
 {
     public enum WindowID
     {

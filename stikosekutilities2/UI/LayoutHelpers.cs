@@ -5,7 +5,7 @@ namespace stikosekutilities2.UI
 {
     public class LayoutHelpers
     {
-        private static string MakeEnable(string text, bool state, bool color = true)
+        public static string MakeEnable(string text, bool state, bool color = true)
         {
             StringBuilder builder = new StringBuilder();
             builder.Append(text).Append(" (");
@@ -22,7 +22,7 @@ namespace stikosekutilities2.UI
 
         public static bool Toggle(string text, bool toggled)
         {
-            if(GUILayout.Button(MakeEnable(text, toggled)))
+            if (GUILayout.Button(MakeEnable(text, toggled)))
             {
                 toggled = !toggled;
             }

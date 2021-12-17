@@ -11,7 +11,7 @@ namespace stikosekutilities2.Cheats
 
         public static BaseCheat[] GetAllCheats()
         {
-            return 
+            return
                 // Get Executing Assembly
                 Assembly.GetExecutingAssembly().
                 // Get all types
