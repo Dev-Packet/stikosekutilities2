@@ -7,6 +7,7 @@ The continuation of stikosekutilities, a [Muck](https://store.steampowered.com/a
 Now developed by [stikosek](https://www.github.com/stikosek) and [JNNJ](https://www.github.com/CodeName-Anti).
 
 ## Install instructions
+
 ### Installing
  1. Download the [stikosekutilities2 Installer](https://github.com/Dev-Packet/stikosekutilities2-installer/releases/latest/download/stikosekutilities2_Installer.exe).
  2. Open the Installer.
@@ -34,7 +35,7 @@ currently nothing lol
 If you need help with the instalation or any bugs please make a github issue or join the [stikosek discord server](https://discord.gg/dzXxU7jwGt) or the [devpacket discord server](https://discord.gg/dzXxU7jwGt) for better support 
 
 ## License
-[MIT](https://opensource.org/licenses/MIT)
+This project is liceneder under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## DISCLAIMER
 This software is for testing/educational purposes only. We do not encourage using it when you're not allowed, and will not bear liability for your actions.

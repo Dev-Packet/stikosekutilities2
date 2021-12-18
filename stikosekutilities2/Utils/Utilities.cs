@@ -80,7 +80,6 @@ namespace stikosekutilities2.Utils
             string path = GetAssemblyLocation();
             string dllLoadPath = Path.Combine(path, "Newtonsoft.Json.dll");
 
-
             if (!File.Exists(dllLoadPath))
             {
                 // Temp Paths
@@ -99,7 +98,7 @@ namespace stikosekutilities2.Utils
                 // Extract the zip.
                 ZipFile.ExtractToDirectory(zip, zipPath);
 
-                string dllFile = Path.Combine(zipPath, "Bin", "net45", "Newtonsoft.Json.dll");
+                string dllFile = Path.Combine(zipPath, "Bin", "netstandard2.0", "Newtonsoft.Json.dll");
 
                 // Copy Newtonsoft.Json to plugins folder, to not download it every start.
                 File.Copy(dllFile, dllLoadPath);

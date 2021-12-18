@@ -5,9 +5,8 @@ using System.Reflection;
 
 namespace stikosekutilities2.Utils
 {
-    internal class VersionChecker
+    public static class VersionChecker
     {
-
         private static readonly bool init;
         public static bool UpdateAvailable;
 
@@ -20,6 +19,7 @@ namespace stikosekutilities2.Utils
                     using var client = new WebClient();
                     // Some random user agent because with others it responds with 403
                     client.Headers.Add("User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0");
+
                     string json = client.DownloadString(PluginConstants.ReleasesAPI);
 
                     JArray jArr = JArray.Parse(json);

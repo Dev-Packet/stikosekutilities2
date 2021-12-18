@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace stikosekutilities2.Utils
 {
+    // KeyCodeFormatter made by JNNJ(https://github.com/CodeName-Anti)
     public class KeyCodeFormatter
     {
         private static Dictionary<KeyCode, string> keyNames;

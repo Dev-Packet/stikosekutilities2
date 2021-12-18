@@ -80,14 +80,16 @@ namespace stikosekutilities2.Utils
             if (updateAvailable)
             {
                 DrawCenteredText(
-                "Welcome to DevPacket's stikosekutilities2, the advanced muck utility mod!" + "\n" +
-                "<b>There's an update available!</b>" + "\n" +
-                "In order to use this mod, update to the newest version!", 40, Color.white);
+                "Welcome to DevPacket's stikosekutilities2," + "\n" +
+                "the advanced muck utility mod!" + "\n" +
+                "In order to use this mod," + "\n" +
+                "update to the newest version!", 40, Color.white);
             }
             else
             {
                 DrawCenteredText(
-                "Welcome to DevPacket's Muck utility mod!" + "\n" +
+                "Welcome to DevPacket's stikosekutilities2," + "\n" +
+                "the advanced muck utility mod!" + "\n" +
                 "To open the ClickGUI press \"" + KeyCodeFormatter.KeyNames[KeyCode.RightShift] + "\"!", 40, Color.white);
             }
 

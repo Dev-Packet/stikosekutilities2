@@ -2,7 +2,7 @@
 
 namespace stikosekutilities2.Utils
 {
-    // DrawingUtil made by JNNJ
+    // DrawingUtil made by JNNJ(https://github.com/CodeName-Anti)
     public class DrawingUtil
     {
 
