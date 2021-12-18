@@ -54,7 +54,7 @@ namespace stikosekutilities2.Cheats
                 }
                 catch (Exception ex)
                 {
-                    Plugin.Log.LogError($"Error while executing Cheat \"{cheat.Name}\": {ex}");
+                    Loader.Log.LogError($"Error while executing Cheat \"{cheat.Name}\": {ex}");
                 }
             });
         }

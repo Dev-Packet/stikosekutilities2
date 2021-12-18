@@ -123,6 +123,8 @@
     <Compile Include="Cheats\NoCoins.cs" />
     <Compile Include="Cheats\Speed.cs" />
     <Compile Include="Cheats\Stamina.cs" />
+    <Compile Include="Cheats\WaterFloat.cs" />
+    <Compile Include="Loader.cs" />
     <Compile Include="Patches\HitableMobPatch.cs" />
     <Compile Include="Patches\HitableResourcePatch.cs" />
     <Compile Include="Patches\LootContainerInteractPatch.cs" />
@@ -131,6 +133,7 @@
     <Compile Include="UI\WindowManager.cs" />
     <Compile Include="Utils\DrawingUtil.cs" />
     <Compile Include="Utils\KeyCodeFormatter.cs" />
+    <Compile Include="Utils\RainbowColor.cs" />
     <Compile Include="Utils\WelcomeScreen.cs" />
     <Compile Include="Utils\Utilities.cs" />
     <Compile Include="Utils\VersionChecker.cs" />

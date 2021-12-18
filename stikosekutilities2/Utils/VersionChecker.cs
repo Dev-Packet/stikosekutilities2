@@ -41,7 +41,7 @@ namespace stikosekutilities2.Utils
                 }
                 catch (Exception)
                 {
-                    Plugin.Log.LogWarning("Couldn't fetch updates from GitHub!");
+                    Loader.Log.LogWarning("Couldn't fetch updates from GitHub!");
                 }
             }
         }
