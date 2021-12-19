@@ -6,7 +6,7 @@ namespace stikosekutilities2.Cheats
     [Cheat]
     public class NoCoins : BaseCheat
     {
-        public NoCoins() : base("NoCoins", WindowID.Player)
+        public NoCoins() : base("Free chests", WindowID.Player)
         {
         }
 

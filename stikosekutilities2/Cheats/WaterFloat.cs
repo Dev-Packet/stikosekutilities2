@@ -8,7 +8,7 @@ namespace stikosekutilities2.Cheats
     {
         private static Rigidbody Rigidbody => PlayerMovement.Instance.GetRb();
 
-        public WaterFloat() : base("WaterFloat", WindowID.Movement)
+        public WaterFloat() : base("Jesus", WindowID.Movement)
         {
         }
 

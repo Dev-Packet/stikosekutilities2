@@ -24,12 +24,36 @@ namespace stikosekutilities2.UI
 
         public static bool Toggle(string text, bool toggled)
         {
-            if (GUILayout.Button(MakeEnable(text, toggled)))
-            {
+            GUIContent content = new(MakeEnable(text, toggled));
 
-                   
+            Rect buttonRect = GUILayoutUtility.GetRect(content, GUI.skin.button, GUILayout.Height(40));
+         
+
+            if (GUI.Button(buttonRect, content))
+            {
+               
+
                 toggled = !toggled;
             }
+
+            if (ColorUtility.TryParseHtmlString(ElementHex, out elec))
+            {
+                Utils.DrawingUtil.DrawColor(elec, buttonRect);
+                Utils.DrawingUtil.DrawText(text, new Rect(buttonRect.x + 5, buttonRect.y + 5, buttonRect.width - 10, buttonRect.height - 10), 12, Color.white);
+
+                
+                
+                Utils.DrawingUtil.DrawColor(WindowManager.border, new Rect(buttonRect.width - 30, buttonRect.y + 5, 30, 30));
+               
+            }
+
+            if (toggled)
+            {
+                Utils.DrawingUtil.DrawColor(elec, new Rect(buttonRect.width - 25, buttonRect.y + 10, 20, 20));
+            }
+            
+
+
 
             return toggled;
         }

@@ -5,7 +5,7 @@ namespace stikosekutilities2.Cheats
     [Cheat]
     public class Stamina : BaseCheat
     {
-        public Stamina() : base("Stamina", WindowID.Player)
+        public Stamina() : base("Infinite stamina", WindowID.Player)
         {
         }
 

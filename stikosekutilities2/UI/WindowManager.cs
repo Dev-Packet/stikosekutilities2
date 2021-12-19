@@ -23,6 +23,8 @@ namespace stikosekutilities2.UI
         public static string RestHex = "#3c4649";
         public static Color top = Color.white;
         public static Color rest = Color.black;
+        public static string BorderHex = "#353a3c";
+        public static Color border = Color.white;
 
         #endregion
 
@@ -67,10 +69,13 @@ namespace stikosekutilities2.UI
         /// <param name="id"></param>
         void DrawWindow(int id)
         {
-
+            if (ColorUtility.TryParseHtmlString(BorderHex, out border))
+            {
+                Utils.DrawingUtil.DrawColor(border, new Rect(0, 0, WindowRect.width, WindowRect.height));
+            }
             if (ColorUtility.TryParseHtmlString(RestHex, out rest))
             {
-                Utils.DrawingUtil.DrawColor(rest, new Rect(0, TopBarThickness, WindowRect.width, WindowRect.height - TopBarThickness));
+                Utils.DrawingUtil.DrawColor(rest, new Rect(5, TopBarThickness - 5, WindowRect.width - 10, WindowRect.height - TopBarThickness));
             }
             if (ColorUtility.TryParseHtmlString(TopHex, out top))
             {

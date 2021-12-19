@@ -24,13 +24,14 @@ namespace stikosekutilities2
             // Add Windows
             GUIRenderer.AddWindow(WindowID.Player, "Player", new(70, 90, 320, 400));
             GUIRenderer.AddWindow(WindowID.Movement, "Movement", new(400, 90, 320, 400));
+            GUIRenderer.AddWindow(WindowID.Items, "Items", new(770, 90, 400, 400));
 
             rainbow = new RainbowColor(.2f);
 
             // Init rendering
             BaseCheat.ExecuteForAllModules(c => c.InitRender());
 
-            Logger.LogInfo($"Loaded {PluginConstants.Name} {Loader.FormattedVersion} by JNNJ & stikosek!");
+            Logger.LogInfo($"Loaded {PluginConstants.Name} {Loader.FormattedVersion} by DevPacket! (H)");
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

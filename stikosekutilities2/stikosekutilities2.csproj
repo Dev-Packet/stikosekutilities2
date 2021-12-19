@@ -124,6 +124,7 @@
     <Compile Include="Cheats\InstaMine.cs" />
     <Compile Include="Cheats\NoCoins.cs" />
     <Compile Include="Cheats\Speed.cs" />
+    <Compile Include="Cheats\McFly.cs" />
     <Compile Include="Cheats\Stamina.cs" />
     <Compile Include="Cheats\WaterFloat.cs" />
     <Compile Include="Loader.cs" />
