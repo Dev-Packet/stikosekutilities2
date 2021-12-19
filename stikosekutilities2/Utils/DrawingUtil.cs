@@ -112,7 +112,7 @@ namespace stikosekutilities2.Utils
         /// <param name="color"></param>
         public static void DrawFullScreenColor(Color color)
         {
-            Texture2D tex = new Texture2D(1, 1);
+            Texture2D tex = new(1, 1);
 
             tex.SetPixel(1, 1, color);
 

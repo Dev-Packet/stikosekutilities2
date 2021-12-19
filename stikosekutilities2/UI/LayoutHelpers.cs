@@ -13,24 +13,9 @@ namespace stikosekutilities2.UI
             horizontalSlider,
             horizontalSliderThumb;
 
-        public static string MakeEnable(string text, bool state, bool color = true)
-        {
-            StringBuilder builder = new();
-            builder.Append(text).Append(" (");
-
-            if (color)
-                builder.Append(state ? "<color=green>ON" : "<color=red>OFF").Append("</color>");
-            else
-                builder.Append(state ? "ON" : "OFF");
-
-            builder.Append(")");
-
-            return builder.ToString();
-        }
-
         public static bool Toggle(string text, bool toggled)
         {
-            GUIContent content = new(MakeEnable(text, toggled));
+            GUIContent content = new("haha stikosekutilities go brrrrrrrrrr");
 
             Rect buttonRect = GUILayoutUtility.GetRect(content, GUI.skin.button, GUILayout.Height(40));
          
@@ -42,12 +27,10 @@ namespace stikosekutilities2.UI
             ColorUtility.TryParseHtmlString(ElementHex, out elec);
             
             DrawingUtil.DrawColor(elec, buttonRect);
-            DrawingUtil.DrawText(text, new Rect(buttonRect.x + 5, buttonRect.y + 5, buttonRect.width - 10, buttonRect.height - 10), 12, Color.white);
+            DrawingUtil.DrawText(text, new Rect(buttonRect.x + 5, buttonRect.y + 5, buttonRect.width - 10, buttonRect.height - 10), 15, Color.white);
 
-               
             DrawingUtil.DrawColor(WindowManager.border, new Rect(buttonRect.width - 30, buttonRect.y + 5, 30, 30));
             
-
             if (toggled)
             {
                 DrawingUtil.DrawColor(elec, new Rect(buttonRect.width - 25, buttonRect.y + 10, 20, 20));
