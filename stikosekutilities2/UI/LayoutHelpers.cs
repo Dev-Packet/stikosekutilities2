@@ -32,7 +32,11 @@ namespace stikosekutilities2.UI
 
         public static bool Button(string text)
         {
-            return GUILayout.Button(text);
+            GUIContent content = new(text);
+
+            Rect buttonRect = GUILayoutUtility.GetRect(content, GUI.skin.button);
+
+            return GUI.Button(buttonRect, content);
         }
 
         public static float Slider(float minValue, float maxValue, float value)
