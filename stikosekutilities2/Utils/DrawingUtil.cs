@@ -91,14 +91,19 @@ namespace stikosekutilities2.Utils
         /// <param name="rect"></param>
         public static void DrawColor(Color color, Rect rect)
         {
-            Texture2D tex = new Texture2D(1, 1);
+            GUI.DrawTexture(rect, ColoredTexture(color));
+        }
+
+        public static Texture2D ColoredTexture(Color color)
+        {
+            Texture2D tex = new(1, 1);
 
             tex.SetPixel(1, 1, color);
 
             tex.wrapMode = TextureWrapMode.Repeat;
             tex.Apply();
 
-            GUI.DrawTexture(rect, tex);
+            return tex;
         }
 
         /// <summary>
