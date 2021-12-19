@@ -2,6 +2,7 @@
 using stikosekutilities2.Cheats;
 using stikosekutilities2.UI;
 using stikosekutilities2.Utils;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace stikosekutilities2
@@ -32,6 +33,7 @@ namespace stikosekutilities2
             Logger.LogInfo($"Loaded {PluginConstants.Name} {Loader.FormattedVersion} by JNNJ & stikosek!");
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void OnGUI()
         {
             // Draw ClickGUI
@@ -45,6 +47,7 @@ namespace stikosekutilities2
             DrawingUtil.DrawText(waterMarkText, DrawingUtil.CenteredTextRect(waterMarkText, fontSize).x, 10, fontSize, rainbow.GetColor());
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void Update()
         {
             // Hide & Show ClickGUI
