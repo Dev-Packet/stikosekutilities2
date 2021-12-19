@@ -18,8 +18,15 @@ namespace stikosekutilities2.UI
         public WindowID WindowId { get; private set; }
 
         private Rect WindowRect;
+        public static int TopBarThickness = 20;
+        public static string TopHex = "#2d2f31";
+        public static string RestHex = "#3c4649";
+        public static Color top = Color.white;
+        public static Color rest = Color.black;
 
         #endregion
+
+
 
         public WindowManager(WindowID windowId, Rect windowRect)
         {
@@ -43,6 +50,8 @@ namespace stikosekutilities2.UI
             }
 
             WindowRect = GUI.Window((int)WindowId, WindowRect, DrawWindow, Text, WindowStyle);
+          
+
 
             if (!AllowOffScreen)
             {
@@ -58,10 +67,24 @@ namespace stikosekutilities2.UI
         /// <param name="id"></param>
         void DrawWindow(int id)
         {
+
+            if (ColorUtility.TryParseHtmlString(RestHex, out rest))
+            {
+                Utils.DrawingUtil.DrawColor(rest, new Rect(0, TopBarThickness, WindowRect.width, WindowRect.height - TopBarThickness));
+            }
+            if (ColorUtility.TryParseHtmlString(TopHex, out top))
+            {
+                //Draw top bar
+                Utils.DrawingUtil.DrawColor(top, new Rect(0, 0, WindowRect.width, TopBarThickness));
+            }
+           
+
+            Utils.DrawingUtil.DrawText(Text, new Rect(0, 0, WindowRect.width, TopBarThickness), TopBarThickness - 3, Color.white);
             DrawWindowEvent();
 
             if (Draggable)
             {
+              
                 GUI.DragWindow(new Rect(0, 0, 10000, 20));
             }
         }

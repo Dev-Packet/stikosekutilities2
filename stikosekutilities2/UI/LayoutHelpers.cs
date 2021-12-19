@@ -5,6 +5,8 @@ namespace stikosekutilities2.UI
 {
     public class LayoutHelpers
     {
+        public static string ElementHex = "#23a86d";
+        public static Color elec = Color.red;
         public static string MakeEnable(string text, bool state, bool color = true)
         {
             StringBuilder builder = new StringBuilder();
@@ -24,6 +26,8 @@ namespace stikosekutilities2.UI
         {
             if (GUILayout.Button(MakeEnable(text, toggled)))
             {
+
+                   
                 toggled = !toggled;
             }
 
