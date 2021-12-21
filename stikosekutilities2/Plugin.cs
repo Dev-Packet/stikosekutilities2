@@ -1,5 +1,4 @@
-﻿
-using BepInEx;
+﻿using BepInEx;
 using stikosekutilities2.Cheats;
 using stikosekutilities2.UI;
 using stikosekutilities2.Utils;

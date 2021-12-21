@@ -5,20 +5,27 @@ using System.Linq;
 namespace stikosekutilities2.Cheats
 {
     [Cheat]
-    public class GiveAllAchievements : BaseCheat
+    public class Achievements : BaseCheat
     {
-        public GiveAllAchievements() : base("Give all Achievements", WindowID.Other)
+        public Achievements() : base("Achievements", WindowID.Other)
         {
         }
 
         protected override void RenderElements()
         {
-            if(Button(Name))
+            if (Button("Give all Achievements"))
             {
                 SteamUserStats.Achievements.ToList().ForEach(a => a.Trigger(true));
 
                 SteamUserStats.StoreStats();
             }
+
+            if (Button("Reset all Achievements"))
+            {
+                SteamUserStats.ResetAll(true);
+                SteamUserStats.StoreStats();
+            }
+            
         }
 
     }

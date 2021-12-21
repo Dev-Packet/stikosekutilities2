@@ -119,17 +119,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cheats\Achievements.cs" />
     <Compile Include="Cheats\BaseCheat.cs" />
     <Compile Include="Cheats\CheatAttribute.cs" />
     <Compile Include="Cheats\ClickTP.cs" />
-    <Compile Include="Cheats\GiveAllAchievements.cs" />
     <Compile Include="Cheats\GodMode.cs" />
     <Compile Include="Cheats\Hunger.cs" />
     <Compile Include="Cheats\InstaKill.cs" />
     <Compile Include="Cheats\InstaMine.cs" />
     <Compile Include="Cheats\NoCoins.cs" />
     <Compile Include="Cheats\Speed.cs" />
-    <Compile Include="Cheats\McFly.cs" />
+    <Compile Include="Cheats\Fly.cs" />
     <Compile Include="Cheats\Stamina.cs" />
     <Compile Include="Cheats\WaterFloat.cs" />
     <Compile Include="Loader.cs" />

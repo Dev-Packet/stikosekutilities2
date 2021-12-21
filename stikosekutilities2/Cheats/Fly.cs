@@ -4,9 +4,9 @@ using UnityEngine;
 namespace stikosekutilities2.Cheats
 {
     [Cheat]
-    public class McFly : BaseCheat
+    public class Fly : BaseCheat
     {
-        public McFly() : base("Fly", WindowID.Movement)
+        public Fly() : base("Fly", WindowID.Movement)
         {
         }
 

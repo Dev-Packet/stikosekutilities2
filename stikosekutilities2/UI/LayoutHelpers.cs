@@ -60,14 +60,19 @@ namespace stikosekutilities2.UI
 
         public static float Slider(float minValue, float maxValue, float value)
         {
+            if (value < minValue)
+                value = minValue;
+
+            if(value > maxValue)
+                value = maxValue;
+
             if (horizontalSlider == null)
             {
                 horizontalSlider = GUI.skin.horizontalSlider;
                 horizontalSliderThumb = GUI.skin.horizontalSliderThumb;
 
-                ColorUtility.TryParseHtmlString("#2d2f31", out Color sliderBackgroundColor);
-                ColorUtility.TryParseHtmlString("#23a86d", out Color thumbBackgroundColor);
-
+                ColorUtility.TryParseHtmlString(WindowManager.BorderHex, out Color sliderBackgroundColor);
+                ColorUtility.TryParseHtmlString(ElementHex, out Color thumbBackgroundColor);
 
                 horizontalSlider.normal.background = DrawingUtil.ColoredTexture(sliderBackgroundColor);
 
