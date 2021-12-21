@@ -119,19 +119,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cheats\Achievements.cs" />
+    <Compile Include="Cheats\Other\Achievements.cs" />
     <Compile Include="Cheats\BaseCheat.cs" />
     <Compile Include="Cheats\CheatAttribute.cs" />
-    <Compile Include="Cheats\ClickTP.cs" />
-    <Compile Include="Cheats\GodMode.cs" />
-    <Compile Include="Cheats\Hunger.cs" />
-    <Compile Include="Cheats\InstaKill.cs" />
-    <Compile Include="Cheats\InstaMine.cs" />
-    <Compile Include="Cheats\NoCoins.cs" />
-    <Compile Include="Cheats\Speed.cs" />
-    <Compile Include="Cheats\Fly.cs" />
-    <Compile Include="Cheats\Stamina.cs" />
-    <Compile Include="Cheats\WaterFloat.cs" />
+    <Compile Include="Cheats\Movement\ClickTP.cs" />
+    <Compile Include="Cheats\Player\GodMode.cs" />
+    <Compile Include="Cheats\Player\Hunger.cs" />
+    <Compile Include="Cheats\Player\InstaKill.cs" />
+    <Compile Include="Cheats\Player\InstaMine.cs" />
+    <Compile Include="Cheats\Player\NoCoins.cs" />
+    <Compile Include="Cheats\Movement\Speed.cs" />
+    <Compile Include="Cheats\Movement\Fly.cs" />
+    <Compile Include="Cheats\Player\Stamina.cs" />
+    <Compile Include="Cheats\Movement\WaterFloat.cs" />
     <Compile Include="Loader.cs" />
     <Compile Include="Patches\HitableMobPatch.cs" />
     <Compile Include="Patches\HitableResourcePatch.cs" />
@@ -153,5 +153,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,6 +14,7 @@ namespace stikosekutilities2.Patches
         {
             if (InstaKill)
             {
+                // Changes parameters to gain more damage
                 damage = __instance.maxHp;
                 sharpness = damage;
             }
