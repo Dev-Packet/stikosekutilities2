@@ -1,5 +1,4 @@
 ﻿using stikosekutilities2.Utils;
-using System.Text;
 using UnityEngine;
 
 namespace stikosekutilities2.UI
@@ -18,19 +17,21 @@ namespace stikosekutilities2.UI
             GUIContent content = new("haha stikosekutilities go brrrrrrrrrr");
 
             Rect buttonRect = GUILayoutUtility.GetRect(content, GUI.skin.button, GUILayout.Height(40));
-         
+
             if (GUI.Button(buttonRect, content))
             {
                 toggled = !toggled;
             }
 
             ColorUtility.TryParseHtmlString(ElementHex, out elec);
-            
-            DrawingUtil.DrawColor(elec, buttonRect);
-            DrawingUtil.DrawText(text, new Rect(buttonRect.x + 5, buttonRect.y + 5, buttonRect.width - 10, buttonRect.height - 10), 15, Color.white);
 
-            DrawingUtil.DrawColor(WindowManager.border, new Rect(buttonRect.width - 30, buttonRect.y + 5, 30, 30));
-            
+            // Draw Button
+            DrawingUtil.DrawColor(elec, buttonRect);
+            // Draw Button text
+            DrawingUtil.DrawText(text, new Rect(buttonRect.x + 5, buttonRect.y + 5, buttonRect.width - 10, buttonRect.height - 10), 15, Color.white);
+            // Draw toggle border
+            DrawingUtil.DrawColor(WindowManager.Border, new Rect(buttonRect.width - 30, buttonRect.y + 5, 30, 30));
+
             if (toggled)
             {
                 DrawingUtil.DrawColor(elec, new Rect(buttonRect.width - 25, buttonRect.y + 10, 20, 20));
@@ -41,11 +42,20 @@ namespace stikosekutilities2.UI
 
         public static bool Button(string text)
         {
-            GUIContent content = new(text);
+            GUIContent content = new("haha stikosekutilities go brrrrrrrrrr");
 
-            Rect buttonRect = GUILayoutUtility.GetRect(content, GUI.skin.button);
+            Rect buttonRect = GUILayoutUtility.GetRect(content, GUI.skin.button, GUILayout.Height(40));
 
-            return GUI.Button(buttonRect, content);
+            bool clicked = GUI.Button(buttonRect, content);
+
+            ColorUtility.TryParseHtmlString(ElementHex, out elec);
+
+            // Draw Button
+            DrawingUtil.DrawColor(elec, buttonRect);
+            // Draw Button text
+            DrawingUtil.DrawText(text, new Rect(buttonRect.x + 5, buttonRect.y + 5, buttonRect.width - 10, buttonRect.height - 10), 15, Color.white);
+
+            return clicked;
         }
 
         public static float Slider(float minValue, float maxValue, float value)

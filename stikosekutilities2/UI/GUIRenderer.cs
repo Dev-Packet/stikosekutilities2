@@ -1,4 +1,5 @@
 ﻿using stikosekutilities2.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -67,6 +68,8 @@ namespace stikosekutilities2.UI
 
         public static void AddWindow(WindowID id, string text, Rect position)
         {
+            if (Windows.Where(window => window.WindowId == id).Any())
+                throw new Exception("Duplicated window");
             Windows.Add(new WindowManager(id, position) { Text = text });
         }
 

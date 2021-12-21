@@ -4,6 +4,7 @@
     {
         Player = 0,
         Movement = 1,
-        Items = 2
+        Items = 2,
+        Other = 3
     }
 }

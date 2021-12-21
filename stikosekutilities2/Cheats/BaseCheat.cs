@@ -3,7 +3,6 @@ using stikosekutilities2.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace stikosekutilities2.Cheats
 {
@@ -29,9 +28,7 @@ namespace stikosekutilities2.Cheats
         public string Name { get; protected set; }
         public WindowID WindowID { get; protected set; }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public virtual void Update() { }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public virtual void OnGUI() { }
         protected virtual void RenderElements() { }
 

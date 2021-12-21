@@ -1,8 +1,8 @@
-﻿using BepInEx;
+﻿
+using BepInEx;
 using stikosekutilities2.Cheats;
 using stikosekutilities2.UI;
 using stikosekutilities2.Utils;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace stikosekutilities2
@@ -24,7 +24,8 @@ namespace stikosekutilities2
             // Add Windows
             GUIRenderer.AddWindow(WindowID.Player, "Player", new(70, 90, 320, 400));
             GUIRenderer.AddWindow(WindowID.Movement, "Movement", new(400, 90, 320, 400));
-            GUIRenderer.AddWindow(WindowID.Items, "Items", new(770, 90, 400, 400));
+            GUIRenderer.AddWindow(WindowID.Items, "Items", new(730, 90, 400, 400));
+            GUIRenderer.AddWindow(WindowID.Other, "Other", new(1140, 90, 320, 400));
 
             rainbow = new RainbowColor(.2f);
 
@@ -33,8 +34,6 @@ namespace stikosekutilities2
 
             Logger.LogInfo($"Loaded {PluginConstants.Name} {Loader.FormattedVersion} by DevPacket! (H)");
         }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void OnGUI()
         {
             // Draw ClickGUI
@@ -48,7 +47,6 @@ namespace stikosekutilities2
             DrawingUtil.DrawText(waterMarkText, DrawingUtil.CenteredTextRect(waterMarkText, fontSize).x, 10, fontSize, rainbow.GetColor());
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void Update()
         {
             // Hide & Show ClickGUI

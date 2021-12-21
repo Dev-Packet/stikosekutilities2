@@ -1,4 +1,5 @@
-﻿using System;
+﻿using stikosekutilities2.Utils;
+using System;
 using UnityEngine;
 
 namespace stikosekutilities2.UI
@@ -17,18 +18,21 @@ namespace stikosekutilities2.UI
         public GUIStyle WindowStyle { get; set; }
         public WindowID WindowId { get; private set; }
 
-        private Rect WindowRect;
+        public Rect WindowRect;
         public static int TopBarThickness = 20;
-        public static string TopHex = "#2d2f31";
-        public static string RestHex = "#3c4649";
-        public static Color top = Color.white;
-        public static Color rest = Color.black;
-        public static string BorderHex = "#353a3c";
-        public static Color border = Color.white;
 
+        public static string
+            TopHex = "#2d2f31",
+            RestHex = "#3c4649",
+            BorderHex = "#353a3c";
+
+        public static Color
+            Top = Color.white,
+            Rest = Color.black,
+            Border = Color.white;
+
+        private static bool colorInit;
         #endregion
-
-
 
         public WindowManager(WindowID windowId, Rect windowRect)
         {
@@ -69,22 +73,23 @@ namespace stikosekutilities2.UI
         /// <param name="id"></param>
         void DrawWindow(int id)
         {
-            if (ColorUtility.TryParseHtmlString(BorderHex, out border))
+            if(!colorInit)
             {
-                Utils.DrawingUtil.DrawColor(border, new Rect(0, 0, WindowRect.width, WindowRect.height));
-            }
-            if (ColorUtility.TryParseHtmlString(RestHex, out rest))
-            {
-                Utils.DrawingUtil.DrawColor(rest, new Rect(5, TopBarThickness - 5, WindowRect.width - 10, WindowRect.height - TopBarThickness));
-            }
-            if (ColorUtility.TryParseHtmlString(TopHex, out top))
-            {
-                //Draw top bar
-                Utils.DrawingUtil.DrawColor(top, new Rect(0, 0, WindowRect.width, TopBarThickness));
-            }
-           
+                ColorUtility.TryParseHtmlString(BorderHex, out Border);
+                ColorUtility.TryParseHtmlString(RestHex, out Rest);
+                ColorUtility.TryParseHtmlString(TopHex, out Top);
 
-            Utils.DrawingUtil.DrawText(Text, new Rect(0, 0, WindowRect.width, TopBarThickness), TopBarThickness - 3, Color.white);
+                colorInit = true;
+            }
+            
+            DrawingUtil.DrawColor(Border, new Rect(0, 0, WindowRect.width, WindowRect.height));
+            
+            DrawingUtil.DrawColor(Rest, new Rect(5, TopBarThickness - 5, WindowRect.width - 10, WindowRect.height - TopBarThickness));
+
+            //Draw top bar
+            DrawingUtil.DrawColor(Top, new Rect(0, 0, WindowRect.width, TopBarThickness));
+            
+            DrawingUtil.DrawText(Text, new Rect(0, 0, WindowRect.width, TopBarThickness), TopBarThickness - 3, Color.white);
             DrawWindowEvent();
 
             if (Draggable)
