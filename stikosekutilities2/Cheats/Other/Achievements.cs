@@ -25,7 +25,7 @@ namespace stikosekutilities2.Cheats
                 SteamUserStats.ResetAll(true);
                 SteamUserStats.StoreStats();
             }
-            
+
         }
 
     }

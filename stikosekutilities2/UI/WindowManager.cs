@@ -56,7 +56,7 @@ namespace stikosekutilities2.UI
             }
 
             WindowRect = GUI.Window((int)WindowId, WindowRect, DrawWindow, Text, WindowStyle);
-          
+
 
 
             if (!AllowOffScreen)
@@ -71,9 +71,9 @@ namespace stikosekutilities2.UI
         /// Draws the Elements of the Window.
         /// </summary>
         /// <param name="id"></param>
-        void DrawWindow(int id)
+        private void DrawWindow(int id)
         {
-            if(!colorInit)
+            if (!colorInit)
             {
                 ColorUtility.TryParseHtmlString(BorderHex, out Border);
                 ColorUtility.TryParseHtmlString(RestHex, out Rest);
@@ -81,20 +81,20 @@ namespace stikosekutilities2.UI
 
                 colorInit = true;
             }
-            
+
             DrawingUtil.DrawColor(Border, new Rect(0, 0, WindowRect.width, WindowRect.height));
-            
+
             DrawingUtil.DrawColor(Rest, new Rect(5, TopBarThickness - 5, WindowRect.width - 10, WindowRect.height - TopBarThickness));
 
             //Draw top bar
             DrawingUtil.DrawColor(Top, new Rect(0, 0, WindowRect.width, TopBarThickness));
-            
+
             DrawingUtil.DrawText(Text, new Rect(0, 0, WindowRect.width, TopBarThickness), TopBarThickness - 3, Color.white);
             DrawWindowEvent();
 
             if (Draggable)
             {
-              
+
                 GUI.DragWindow(new Rect(0, 0, 10000, 20));
             }
         }

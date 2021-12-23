@@ -38,7 +38,7 @@ namespace stikosekutilities2.Utils
             DrawWelcome();
         }
 
-        static void DrawWelcome()
+        private static void DrawWelcome()
         {
             if (!draw) return;
 

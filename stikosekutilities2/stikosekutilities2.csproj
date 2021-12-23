@@ -119,14 +119,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cheats\Items.cs" />
+    <Compile Include="Cheats\Movement\AirJump.cs" />
+    <Compile Include="Cheats\Movement\OmegaJump.cs" />
     <Compile Include="Cheats\Other\Achievements.cs" />
     <Compile Include="Cheats\BaseCheat.cs" />
     <Compile Include="Cheats\CheatAttribute.cs" />
     <Compile Include="Cheats\Movement\ClickTP.cs" />
     <Compile Include="Cheats\Player\GodMode.cs" />
     <Compile Include="Cheats\Player\Hunger.cs" />
-    <Compile Include="Cheats\Player\InstaKill.cs" />
+    <Compile Include="Cheats\Combat\InstaKill.cs" />
     <Compile Include="Cheats\Player\InstaMine.cs" />
     <Compile Include="Cheats\Player\NoCoins.cs" />
     <Compile Include="Cheats\Movement\Speed.cs" />
@@ -137,13 +138,13 @@
     <Compile Include="Patches\HitableMobPatch.cs" />
     <Compile Include="Patches\HitableResourcePatch.cs" />
     <Compile Include="Patches\LootContainerInteractPatch.cs" />
-    <Compile Include="Patches\PlayerStatusPatch.cs" />
     <Compile Include="UI\GUIRenderer.cs" />
     <Compile Include="UI\LayoutHelpers.cs" />
     <Compile Include="UI\WindowManager.cs" />
     <Compile Include="Utils\DrawingUtil.cs" />
     <Compile Include="Utils\KeyCodeFormatter.cs" />
     <Compile Include="Utils\RainbowColor.cs" />
+    <Compile Include="Utils\ReflectionExtensions.cs" />
     <Compile Include="Utils\WelcomeScreen.cs" />
     <Compile Include="Utils\Utilities.cs" />
     <Compile Include="Utils\VersionChecker.cs" />

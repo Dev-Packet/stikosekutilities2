@@ -4,7 +4,7 @@
     {
         Player = 0,
         Movement = 1,
-        Items = 2,
+        Combat = 2,
         Other = 3
     }
 }

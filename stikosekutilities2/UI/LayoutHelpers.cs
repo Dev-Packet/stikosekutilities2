@@ -1,5 +1,4 @@
 ﻿using stikosekutilities2.Utils;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace stikosekutilities2.UI
@@ -10,8 +9,8 @@ namespace stikosekutilities2.UI
         public static Color elec = Color.red;
 
         private static GUIStyle
-            horizontalSlider,
-            horizontalSliderThumb;
+            horizontalSlider = null,
+            horizontalSliderThumb = null;
 
         public static bool Toggle(string text, bool toggled)
         {
@@ -59,62 +58,48 @@ namespace stikosekutilities2.UI
             return clicked;
         }
 
-        public static bool ItemButton(Sprite sprite, Vector2 scrollPosition)
-        {
-            Texture2D tex = sprite.texture;
-            GUIContent content = new(tex);
-
-            Rect buttonRect = GUILayoutUtility.GetRect(content, GUI.skin.button, GUILayout.MaxHeight(69));
-
-            if(IsVisible(buttonRect, scrollPosition))
-            {
-                DrawingUtil.DrawColor(elec, buttonRect);
-
-                return GUI.Button(buttonRect, content);
-            }
-            
-            return false;
-        }
-
-        private static bool IsVisible(Rect buttonRect, Vector2 scrollPosition)
-        {
-            WindowManager manager = GUIRenderer.GetWindow(WindowID.Items);
-            if(buttonRect.yMax < manager.WindowRect.height + scrollPosition.y &&
-                buttonRect.yMin > scrollPosition.y)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
         public static float Slider(float minValue, float maxValue, float value)
         {
             if (value < minValue)
                 value = minValue;
 
-            if(value > maxValue)
+            if (value > maxValue)
                 value = maxValue;
 
             if (horizontalSlider == null || horizontalSliderThumb == null)
             {
-                horizontalSlider = GUI.skin.horizontalSlider;
-                horizontalSliderThumb = GUI.skin.horizontalSliderThumb;
+                ResetSliderStyle();
+            }
 
-                ColorUtility.TryParseHtmlString(WindowManager.BorderHex, out Color sliderBackgroundColor);
-                ColorUtility.TryParseHtmlString(ElementHex, out Color thumbBackgroundColor);
+            if (horizontalSlider.normal == null || horizontalSliderThumb.normal == null)
+            {
+                ResetSliderStyle();
+            }
 
-                horizontalSlider.normal.background = DrawingUtil.ColoredTexture(sliderBackgroundColor);
-
-                Texture2D thumbTexture = DrawingUtil.ColoredTexture(thumbBackgroundColor);
-
-                horizontalSliderThumb.normal.background = thumbTexture;
-                horizontalSliderThumb.hover.background = thumbTexture;
-                horizontalSliderThumb.active.background = thumbTexture;
-                horizontalSliderThumb.focused.background = thumbTexture;
+            if (horizontalSlider.normal.background == null || horizontalSliderThumb.normal.background == null)
+            {
+                ResetSliderStyle();
             }
 
             return GUILayout.HorizontalSlider(value, minValue, maxValue, horizontalSlider, horizontalSliderThumb);
+        }
+
+        private static void ResetSliderStyle()
+        {
+            horizontalSlider = new(GUI.skin.horizontalSlider);
+            horizontalSliderThumb = new(GUI.skin.horizontalSliderThumb);
+
+            ColorUtility.TryParseHtmlString(WindowManager.BorderHex, out Color sliderBackgroundColor);
+            ColorUtility.TryParseHtmlString(ElementHex, out Color thumbBackgroundColor);
+
+            horizontalSlider.normal.background = DrawingUtil.ColoredTexture(sliderBackgroundColor);
+
+            Texture2D thumbTexture = DrawingUtil.ColoredTexture(thumbBackgroundColor);
+
+            horizontalSliderThumb.normal.background = thumbTexture;
+            horizontalSliderThumb.hover.background = thumbTexture;
+            horizontalSliderThumb.active.background = thumbTexture;
+            horizontalSliderThumb.focused.background = thumbTexture;
         }
 
         public static void Label(string text)

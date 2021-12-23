@@ -6,7 +6,7 @@ namespace stikosekutilities2.Cheats
     [Cheat]
     public class InstaKill : BaseCheat
     {
-        public InstaKill() : base("InstaKill", WindowID.Player)
+        public InstaKill() : base("InstaKill", WindowID.Combat)
         {
         }
 
