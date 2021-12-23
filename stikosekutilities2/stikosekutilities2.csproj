@@ -119,6 +119,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cheats\Items.cs" />
     <Compile Include="Cheats\Other\Achievements.cs" />
     <Compile Include="Cheats\BaseCheat.cs" />
     <Compile Include="Cheats\CheatAttribute.cs" />
@@ -136,6 +137,7 @@
     <Compile Include="Patches\HitableMobPatch.cs" />
     <Compile Include="Patches\HitableResourcePatch.cs" />
     <Compile Include="Patches\LootContainerInteractPatch.cs" />
+    <Compile Include="Patches\PlayerStatusPatch.cs" />
     <Compile Include="UI\GUIRenderer.cs" />
     <Compile Include="UI\LayoutHelpers.cs" />
     <Compile Include="UI\WindowManager.cs" />

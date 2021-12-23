@@ -1,4 +1,5 @@
 ﻿using stikosekutilities2.Utils;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace stikosekutilities2.UI
@@ -58,6 +59,35 @@ namespace stikosekutilities2.UI
             return clicked;
         }
 
+        public static bool ItemButton(Sprite sprite, Vector2 scrollPosition)
+        {
+            Texture2D tex = sprite.texture;
+            GUIContent content = new(tex);
+
+            Rect buttonRect = GUILayoutUtility.GetRect(content, GUI.skin.button, GUILayout.MaxHeight(69));
+
+            if(IsVisible(buttonRect, scrollPosition))
+            {
+                DrawingUtil.DrawColor(elec, buttonRect);
+
+                return GUI.Button(buttonRect, content);
+            }
+            
+            return false;
+        }
+
+        private static bool IsVisible(Rect buttonRect, Vector2 scrollPosition)
+        {
+            WindowManager manager = GUIRenderer.GetWindow(WindowID.Items);
+            if(buttonRect.yMax < manager.WindowRect.height + scrollPosition.y &&
+                buttonRect.yMin > scrollPosition.y)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         public static float Slider(float minValue, float maxValue, float value)
         {
             if (value < minValue)
@@ -66,7 +96,7 @@ namespace stikosekutilities2.UI
             if(value > maxValue)
                 value = maxValue;
 
-            if (horizontalSlider == null)
+            if (horizontalSlider == null || horizontalSliderThumb == null)
             {
                 horizontalSlider = GUI.skin.horizontalSlider;
                 horizontalSliderThumb = GUI.skin.horizontalSliderThumb;
