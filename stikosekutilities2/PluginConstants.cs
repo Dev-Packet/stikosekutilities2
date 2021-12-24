@@ -10,7 +10,7 @@
 
         // GitHub related
         public const string
-            RepositoryOwner = "DevPacket",
+            RepositoryOwner = "Dev-Packet",
             Repository = "stikosekutilities2",
             RepositoryURL = $"https://github.com/{RepositoryOwner}/{Repository}",
             ReleasesAPI = $"https://api.github.com/repos/{RepositoryOwner}/{Repository}/releases";
