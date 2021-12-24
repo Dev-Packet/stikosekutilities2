@@ -6,7 +6,7 @@
         public const string
             Name = "stikosekutilities2",
             GUID = "devpacket.stikosekutilities2",
-            Version = "0.0.0.1";
+            Version = "0.1.0.0";
 
         // GitHub related
         public const string

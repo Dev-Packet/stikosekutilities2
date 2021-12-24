@@ -20,7 +20,7 @@ namespace stikosekutilities2
         {
             Instance = this;
 
-            waterMarkText = $"{PluginConstants.Name} {Loader.FormattedVersion} by DevPacket";
+            waterMarkText = $"{PluginConstants.Name} {Loader.FormattedVersion} BETA by DevPacket";
 
             // Add Windows
             GUIRenderer.AddWindow(WindowID.Player, "Player", new(70, 90, 320, 400));
