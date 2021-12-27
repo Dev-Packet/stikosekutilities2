@@ -4,8 +4,8 @@
   <Target Name="ILRepacker" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
     
     <ItemGroup>
-      <InputAssemblies Include="@(ReferencePathWithRefAssemblies)" Condition="'%(filename)' == 'Newtonsoft.Json'" />
       <InputAssemblies Include="$(TargetPath)"/>
+      <InputAssemblies Include="@(ReferencePathWithRefAssemblies)" Condition="'%(filename)' == 'Newtonsoft.Json'" />
     </ItemGroup>
 
     <!-- Change to your BepInEx Dependencies location-->
