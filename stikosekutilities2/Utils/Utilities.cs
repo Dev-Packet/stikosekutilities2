@@ -71,43 +71,6 @@ namespace stikosekutilities2.Utils
             client.DownloadFile(url, fileName);
         }
 
-        /// <summary>
-        /// Downloads Newtonsoft Json.
-        /// </summary>
-        public static void DownloadJsonLibrary()
-        {
-            // Paths
-            string path = GetAssemblyLocation();
-            string dllLoadPath = Path.Combine(path, "Newtonsoft.Json.dll");
-
-            if (!File.Exists(dllLoadPath))
-            {
-                // Temp Paths
-                string tempPath = Path.Combine(Path.GetTempPath(), "CrabGame Cheat " + Guid.NewGuid().ToString());
-                string zipPath = Path.Combine(tempPath, "Unzipped");
-
-                string zip = Path.Combine(tempPath, "Json.zip");
-
-                // Create zipPath
-                Directory.CreateDirectory(zipPath);
-
-                // Download Newtonsoft.Json.
-                DownloadFile(zip,
-                    "https://github.com/JamesNK/Newtonsoft.Json/releases/download/13.0.1/Json130r1.zip");
-
-                // Extract the zip.
-                ZipFile.ExtractToDirectory(zip, zipPath);
-
-                string dllFile = Path.Combine(zipPath, "Bin", "netstandard2.0", "Newtonsoft.Json.dll");
-
-                // Copy Newtonsoft.Json to plugins folder, to not download it every start.
-                File.Copy(dllFile, dllLoadPath);
-
-                // Load Newtonsoft.Json
-                Assembly.LoadFrom(dllLoadPath);
-            }
-        }
-
         public static string GetAssemblyLocation()
         {
             return GetAssemblyLocation(Assembly.GetExecutingAssembly());

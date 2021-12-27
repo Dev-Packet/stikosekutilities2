@@ -24,9 +24,6 @@ namespace stikosekutilities2
             FormattedVersion = Utilities.FormatAssemblyVersion(true);
             WelcomeScreen.draw = true;
 
-            // Download Newtosoft.Json
-            Utilities.DownloadJsonLibrary();
-
             if (VersionChecker.UpdateAvailable)
             {
                 // Cancel loading

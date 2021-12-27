@@ -14,7 +14,7 @@ namespace stikosekutilities2.UI
 
         public static bool Toggle(string text, bool toggled)
         {
-            GUIContent content = new("haha stikosekutilities go brrrrrrrrrr");
+            GUIContent content = new("This is an error, report it to one of the creators.");
 
             Rect buttonRect = GUILayoutUtility.GetRect(content, GUI.skin.button, GUILayout.Height(40));
 

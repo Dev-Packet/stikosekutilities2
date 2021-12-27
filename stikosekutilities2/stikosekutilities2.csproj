@@ -1,161 +1,102 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F2483597-C002-46D0-9C85-759BAF82E663}</ProjectGuid>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>stikosekutilities2</RootNamespace>
-    <AssemblyName>stikosekutilities2</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
     <Langversion>10.0</Langversion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <IsPublishable>true</IsPublishable>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\BepInEx\core\0Harmony.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\Muck_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="BepInEx">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\BepInEx\core\BepInEx.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="BepInEx.Harmony">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\BepInEx\core\BepInEx.Harmony.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="BepInEx.Preloader">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\BepInEx\core\BepInEx.Preloader.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="Facepunch.Steamworks.Win64">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\Muck_Data\Managed\Facepunch.Steamworks.Win64.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Update="System">
       <Private>False</Private>
     </Reference>
-    <Reference Include="System">
+    <Reference Update="System.Core">
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Core">
+    <Reference Update="System.Xml.Linq">
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.IO.Compression.FileSystem" />
-    <Reference Include="System.Xml.Linq">
+    <Reference Update="System.Data">
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.CSharp">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Data">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Net.Http">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Xml">
+    <Reference Update="System.Xml">
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\Muck_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\Muck_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\Muck_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\Muck_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="UnityEngine.InputModule">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\Muck_Data\Managed\UnityEngine.InputModule.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\Muck_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\Muck_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Muck\Muck_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
+      <CopyLocal>False</CopyLocal>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cheats\Movement\AirJump.cs" />
-    <Compile Include="Cheats\Movement\OmegaJump.cs" />
-    <Compile Include="Cheats\Other\Achievements.cs" />
-    <Compile Include="Cheats\BaseCheat.cs" />
-    <Compile Include="Cheats\CheatAttribute.cs" />
-    <Compile Include="Cheats\Movement\ClickTP.cs" />
-    <Compile Include="Cheats\Player\GodMode.cs" />
-    <Compile Include="Cheats\Player\Hunger.cs" />
-    <Compile Include="Cheats\Combat\InstaKill.cs" />
-    <Compile Include="Cheats\Player\InstaMine.cs" />
-    <Compile Include="Cheats\Player\NoCoins.cs" />
-    <Compile Include="Cheats\Movement\Speed.cs" />
-    <Compile Include="Cheats\Movement\Fly.cs" />
-    <Compile Include="Cheats\Player\Stamina.cs" />
-    <Compile Include="Cheats\Movement\WaterFloat.cs" />
-    <Compile Include="Loader.cs" />
-    <Compile Include="Patches\HitableMobPatch.cs" />
-    <Compile Include="Patches\HitableResourcePatch.cs" />
-    <Compile Include="Patches\LootContainerInteractPatch.cs" />
-    <Compile Include="UI\GUIRenderer.cs" />
-    <Compile Include="UI\LayoutHelpers.cs" />
-    <Compile Include="UI\WindowManager.cs" />
-    <Compile Include="Utils\DrawingUtil.cs" />
-    <Compile Include="Utils\KeyCodeFormatter.cs" />
-    <Compile Include="Utils\RainbowColor.cs" />
-    <Compile Include="Utils\ReflectionExtensions.cs" />
-    <Compile Include="Utils\WelcomeScreen.cs" />
-    <Compile Include="Utils\Utilities.cs" />
-    <Compile Include="Utils\VersionChecker.cs" />
-    <Compile Include="PluginConstants.cs" />
-    <Compile Include="Plugin.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\WindowID.cs" />
+    <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.18.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1">
+      <PrivateAssets></PrivateAssets>
+    </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
