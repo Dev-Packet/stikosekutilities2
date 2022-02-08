@@ -32,7 +32,7 @@ If you dont want to use our installer you can install the mod mannualy
 currently nothing lol
 
 ## Support
-If you need help with the instalation or any bugs please make a github issue or join the [stikosek discord server](https://discord.gg/dzXxU7jwGt) or the [devpacket discord server](https://discord.gg/dzXxU7jwGt) for better support 
+If you need help with the installation or any bugs please make a GitHub issue or join the [stikosek discord server](https://discord.gg/dzXxU7jwGt) or the [devpacket discord server](https://discord.gg/dzXxU7jwGt) for better support 
 
 ## License
 This project is liceneder under the [MIT License](https://opensource.org/licenses/MIT).
